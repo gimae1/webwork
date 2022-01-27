@@ -1,0 +1,12 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+			<!-- content end -->
+			</td>
+		</tr>
+		<tr>
+			<td colspan="6">
+			<img alt="img" src="/day36/imgs/img08.png">
+			</td>
+		</tr>
+	</table>
+    
