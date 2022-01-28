@@ -1,0 +1,35 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<jsp:useBean id="user" class="com.hi.bean.UserBean" scope="session"></jsp:useBean>
+    <table border="0" width="800" align="center">
+	<tr>
+		<td colspan="6">
+		<img src="https://dummyimage.com/300x100/aaa/fff.png&text=logo">
+		<%if(user.isResult()){ %>
+		<p align="right"><jsp:getProperty property="name" name="user"/>님 로그인 중...</p>
+		<% }else{%>
+		<p align="right">guest 접속중...</p>
+		<%} %>
+		</td>
+	</tr>
+	<tr>
+	<%
+	//context?
+//	System.out.println(request.getContextPath());		
+	String root=request.getContextPath();	//project 명과 	context 명이 일치하지 않는 경우를 위해
+	%>
+		<td bgcolor="#aaaaaa">&nbsp;</td>
+		<td bgcolor="#aaaaaa" width="100" align="center"><a href="<%=root%>">[HO ME]</a></td>
+		<td bgcolor="#aaaaaa" width="100" align="center"><a href="<%=root%>/intro.jsp">[INTRO]</a></td>
+		<td bgcolor="#aaaaaa" width="100" align="center"><a href="<%=root%>/bbs/index.jsp">[B B S]</a></td>
+		<% if(user.isResult()){ %>
+		<td bgcolor="#aaaaaa" width="100" align="center"><a href="<%=root%>/login/logout.jsp">[LOGOUT]</a></td>
+		<%}else{ %>
+		<td bgcolor="#aaaaaa" width="100" align="center"><a href="<%=root%>/login/">[LOGIN]</a></td>
+		<%} %>
+	
+		<td bgcolor="#aaaaaa">&nbsp;</td>
+	</tr>
+	<tr>
+		<td colspan="6" align="center">
+		<!-- content start -->
