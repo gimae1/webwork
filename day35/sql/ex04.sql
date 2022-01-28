@@ -4,7 +4,7 @@ create table bbs04(
 	sub varchar2(30),
 	content varchar2(2000),
 	nalja date
-);
+);	
 create sequence bbs04_seq;
 insert into bbs04 values(bbs04_seq.nextval,'tester','test1','test',sysdate);
 insert into bbs04 values(bbs04_seq.nextval,'tester','test2','test',sysdate);
